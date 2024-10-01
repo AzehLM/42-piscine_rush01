@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_tab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azeh <azeh@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 10:24:37 by azeh              #+#    #+#             */
-/*   Updated: 2024/09/30 10:26:40 by azeh             ###   ########.fr       */
+/*   Updated: 2024/10/01 18:25:49 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	print_tab(int **tab, int size)
 	int	i;
 	int	j;
 	int	grid_size;
-	
+
 	i = 0;
 	grid_size = ((size / 8) + 2);
 	while (i < grid_size)

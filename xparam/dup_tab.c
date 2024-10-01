@@ -6,15 +6,15 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:24:35 by gueberso          #+#    #+#             */
-/*   Updated: 2024/10/01 13:24:37 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:23:02 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    *ft_linedup(int **tab, int size, int line)
+int *ft_linedup(int **tab, int size, int line)
 {
-    int    i;
+    int i;
     int    *tabline;
 
     i = 0;

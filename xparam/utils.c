@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azeh <azeh@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 17:56:39 by azeh              #+#    #+#             */
-/*   Updated: 2024/09/29 17:58:07 by azeh             ###   ########.fr       */
+/*   Updated: 2024/10/01 18:28:22 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,11 @@ void	ft_putstrerror(char *str)
 		write(2, &str[i], 1);
 		i++;
 	}
+}
+
+int	check_value(int **duptab, int i, int j)
+{
+	if (duptab[i][j] != 0)
+		return (0);
+	return (1);
 }

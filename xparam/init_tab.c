@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   init_tab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azeh <azeh@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:55:50 by azeh              #+#    #+#             */
-/*   Updated: 2024/09/30 10:29:11 by azeh             ###   ########.fr       */
+/*   Updated: 2024/10/01 18:24:55 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	init_borders(int **tab, char *str)
+int	**init_borders(int **tab, char *str)
 {
 	int	strindex;
 	int	tabindex;
@@ -38,6 +38,7 @@ void	init_borders(int **tab, char *str)
 			tabindex = 1;
 		strindex += 2;
 	}
+	return (tab);
 }
 
 int	**init_tab(char *str, size_t size)
@@ -47,7 +48,6 @@ int	**init_tab(char *str, size_t size)
 	int		grid_size;
 	int		**tab;
 
-	(void) str;
 	grid_size = ((size / 8) + 2);
 	tab = malloc(grid_size * sizeof(int *));
 	if (!tab)
@@ -66,6 +66,6 @@ int	**init_tab(char *str, size_t size)
 		tab[j / grid_size][j % grid_size] = 0;
 		j++;
 	}
-	init_borders(tab, str);
+	tab = init_borders(tab, str);
 	return (tab);
 }

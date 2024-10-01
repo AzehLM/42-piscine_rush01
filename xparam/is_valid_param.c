@@ -6,13 +6,13 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:24:11 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 12:19:19 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:30:21 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_n_number(char *str, int size) /*verifie si */
+int	check_n_number(char *str, int size)
 {
 	int	i;
 	int	count;
@@ -47,7 +47,7 @@ int	check_oppos(char *str, int size)
 	{
 		if (i == gridouble)
 			i = i + gridouble;
-		if (((str[i]  - 48) + (str[i + gridouble]) - 48) < 3
+		if (((str[i] - 48) + (str[i + gridouble]) - 48) < 3
 			|| ((str[i] - 48) + (str[i + gridouble]) - 48) > (grid_size + 1))
 			return (0);
 		i += 2;

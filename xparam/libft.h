@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:17:20 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 12:42:16 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:29:48 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ void	ft_putstr(char *str);
 void	ft_putchar(char c);
 void	ft_putstrerror(char *str);
 void	print_tab(int **tab, int size);
+void	fill_min(int **duptab, int size);
 
 size_t	ft_strlen(char *str);
 
-int	**init_tab(char *str, size_t size);
-int	is_valid_param(char *str, int size);
-int	**ft_tabdup(int **tab, int size);
+int		**init_tab(char *str, size_t size);
+int		is_valid_param(char *str, int size);
+int		**ft_tabdup(int **tab, int size);
+
+int		check_value(int **duptab, int i, int j);
 
 #endif

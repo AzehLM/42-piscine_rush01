@@ -4,6 +4,7 @@ SRCS	:= \
 	main.c \
 	utils.c \
 	dup_tab.c \
+	pre_fill.c \
 	init_tab.c \
 	print_tab.c \
 	is_valid_param.c \

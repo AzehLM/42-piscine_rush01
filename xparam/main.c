@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:15:22 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 13:17:23 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:30:42 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,8 @@ void	free_tabs(int size, int **tab, int **duptab)
 int	main(int ac, char **av)
 {
 	int		**tab;
+	int		**duptab;
 	size_t	size;
-
-	int	**duptab;
 
 	size = ft_strlen(av[1]) + 1;
 	if (ac != 2 || check_arg(av[1]) == 0 || is_valid_param(av[1], size) == 0)
@@ -71,6 +70,7 @@ int	main(int ac, char **av)
 		return (-1);
 	print_tab(tab, size);
 	printf("\n");
+	fill_min(duptab, size);
 	print_tab(duptab, size);
 	free_tabs(size, tab, duptab);
 	return (0);
