@@ -4,9 +4,11 @@ SRCS	:= \
 	main.c \
 	utils.c \
 	dup_tab.c \
-	pre_fill.c \
 	init_tab.c \
+	pre_fill.c \
 	print_tab.c \
+	pre_fill_min.c \
+	pre_fill_max.c \
 	is_valid_param.c \
 
 BUILD_DIR	:= .build

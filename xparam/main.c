@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:15:22 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 18:30:42 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:50:27 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	main(int ac, char **av)
 		return (-1);
 	print_tab(tab, size);
 	printf("\n");
-	fill_min(duptab, size);
+	pre_fill(duptab, size);
 	print_tab(duptab, size);
 	free_tabs(size, tab, duptab);
 	return (0);

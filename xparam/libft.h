@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:17:20 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 18:29:48 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:49:35 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ void	ft_putchar(char c);
 void	ft_putstrerror(char *str);
 void	print_tab(int **tab, int size);
 void	fill_min(int **duptab, int size);
+void	fill_max(int **duptab, int size);
+
+void	pre_fill(int **duptab, int size);
 
 size_t	ft_strlen(char *str);
 
