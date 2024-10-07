@@ -35,7 +35,8 @@ uint8_t		valid_tab(uint8_t **tab, uint8_t max);
 uint8_t		**init_tab(char *str, size_t size);
 uint8_t		is_valid_param(char *str, uint8_t size);
 uint8_t		**ft_tabdup(uint8_t **tab, uint8_t size);
-
+uint8_t		check_line(uint8_t **tab, uint8_t line, uint8_t max);
+uint8_t		check_row(uint8_t **tab, uint8_t row, uint8_t max);
 uint8_t		check_value(uint8_t **duptab, uint8_t i, uint8_t j);
 
 #endif

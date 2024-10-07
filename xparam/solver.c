@@ -27,14 +27,15 @@ uint8_t	solve_tab(uint8_t **tab, uint8_t index, uint8_t size)
 		value = 1;
 		while (value < max + 1)
 		{
+			tab[index / max + 1][index % max + 1] = value;
 			if (is_valid_value(tab, value, index, max))
 			{
-				tab[index / max + 1][index % max + 1] = value;
 				if (solve_tab(tab, index + 1, size))
 					return (1);
 			}
 			value++;
 		}
+		tab[index / max + 1][index % max + 1] = 0;
 	}
 	return (0);
 }

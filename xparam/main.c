@@ -76,6 +76,8 @@ int	main(int ac, char **av)
 		printf("  SOLVING   \n");
 		print_tab(tab, size);
 	}
+	else
+		printf("ERROR\n");
 	// printf("\n\n---solving---");
 	// solve_tab(tab, 0, size);
 	// print_tab(tab, size);

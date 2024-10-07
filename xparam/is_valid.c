@@ -37,7 +37,7 @@ uint8_t	check_up(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max)
 
 uint8_t	is_valid_value(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max)
 {
-	if (!check_left(tab, value, index, max) || !check_up(tab, value, index, max))
+	if (!check_left(tab, value, index, max) || !check_up(tab, value, index, max) || !check_row(tab, index % max + 1, max) || !check_line(tab, index / max + 1, max))
 		return (0);
 	return (1);
 }
