@@ -33,7 +33,7 @@ DIR_DUP     = mkdir -p $(BUILD_DIR)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) $(INCS)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) $(INCS) -O3
 	@echo "CREATED $@"
 
 $(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
