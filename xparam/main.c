@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:15:22 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 18:50:27 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/07 10:28:00 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,18 @@ int	main(int ac, char **av)
 	duptab = ft_tabdup(tab, size);
 	if (!tab)
 		return (-1);
-	print_tab(tab, size);
-	printf("\n");
 	pre_fill(duptab, size);
 	print_tab(duptab, size);
+	printf("\n");
+	if (solve_tab(tab, 0, size))
+	{
+		printf("  SOLVING   \n");
+		print_tab(tab, size);
+	}
+	// printf("\n\n---solving---");
+	// solve_tab(tab, 0, size);
+	// print_tab(tab, size);
+	printf("\n");
 	free_tabs(size, tab, duptab);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:17:20 by azeh              #+#    #+#             */
-/*   Updated: 2024/10/01 18:49:35 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/07 08:24:19 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ void	pre_fill(int **duptab, int size);
 
 size_t	ft_strlen(char *str);
 
+int		solve_tab(int **tab, int index, int size);
+int		is_valid_value(int **tab, int value, int index, int max);
+int		valid_tab(int **tab, int max);
 int		**init_tab(char *str, size_t size);
 int		is_valid_param(char *str, int size);
 int		**ft_tabdup(int **tab, int size);

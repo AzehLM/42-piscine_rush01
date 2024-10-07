@@ -2,9 +2,12 @@ NAME	= rush01
 
 SRCS	:= \
 	main.c \
+	check.c \
 	utils.c \
+	solver.c \
 	dup_tab.c \
 	init_tab.c \
+	is_valid.c \
 	pre_fill.c \
 	print_tab.c \
 	pre_fill_min.c \

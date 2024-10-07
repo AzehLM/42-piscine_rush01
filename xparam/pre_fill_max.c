@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:40:47 by gueberso          #+#    #+#             */
-/*   Updated: 2024/10/05 17:27:00 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/07 07:54:11 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,6 @@ void	fill_left_right_max(int **duptab, int size)
 		i++;
 	}
 }
-
-// void	fill_max(int **duptab, int size)
-// {
-// 	fill_left_right_max(duptab, size);
-// 	fill_up_down_max(duptab, size);
-// }
 
 void	max_column_fill(int **tab, int i, int j, int size)
 {
