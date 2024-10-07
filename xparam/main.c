@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int	check_arg(char *av)
+uint8_t	check_arg(char *av)
 {
-	int	i;
-	int	size;
+	uint8_t	i;
+	uint8_t	size;
 
 	i = 0;
 	size = ft_strlen(av);
@@ -37,10 +37,10 @@ int	check_arg(char *av)
 	return (1);
 }
 
-void	free_tabs(int size, int **tab, int **duptab)
+void	free_tabs(uint8_t size, uint8_t **tab, uint8_t **duptab)
 {
-	int	i;
-	int	j;
+	uint8_t	i;
+	uint8_t	j;
 
 	i = 0;
 	j = 0;
@@ -54,8 +54,8 @@ void	free_tabs(int size, int **tab, int **duptab)
 
 int	main(int ac, char **av)
 {
-	int		**tab;
-	int		**duptab;
+	uint8_t		**tab;
+	uint8_t		**duptab;
 	size_t	size;
 
 	size = ft_strlen(av[1]) + 1;

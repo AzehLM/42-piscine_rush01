@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int	check_n_number(char *str, int size)
+uint8_t	check_n_number(char *str, uint8_t size)
 {
-	int	i;
-	int	count;
-	int	grid_size;
+	uint8_t	i;
+	uint8_t	count;
+	uint8_t	grid_size;
 
 	grid_size = (size / 8);
 	i = 0;
@@ -32,12 +32,12 @@ int	check_n_number(char *str, int size)
 	return (1);
 }
 
-int	check_oppos(char *str, int size)
+uint8_t	check_oppos(char *str, uint8_t size)
 {
-	int	i;
-	int	j;
-	int	grid_size;
-	int	gridouble;
+	uint8_t	i;
+	uint8_t	j;
+	uint8_t	grid_size;
+	uint8_t	gridouble;
 
 	i = 0;
 	j = 0;
@@ -56,7 +56,7 @@ int	check_oppos(char *str, int size)
 	return (1);
 }
 
-int	is_valid_param(char *str, int size)
+uint8_t	is_valid_param(char *str, uint8_t size)
 {
 	if (check_oppos(str, size) == 0 || check_n_number(str, size) == 0)
 		return (0);

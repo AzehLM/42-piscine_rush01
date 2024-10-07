@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	check_left(int **tab, int value, int index, int max)
+uint8_t	check_left(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max)
 {
 	while (index % max != 0)
 	{
@@ -23,7 +23,7 @@ int	check_left(int **tab, int value, int index, int max)
 	return (1);
 }
 
-int	check_up(int **tab, int value, int index, int max)
+uint8_t	check_up(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max)
 {
 	while (index / max != 0)
 	{
@@ -35,7 +35,7 @@ int	check_up(int **tab, int value, int index, int max)
 }
 
 
-int	is_valid_value(int **tab, int value, int index, int max)
+uint8_t	is_valid_value(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max)
 {
 	if (!check_left(tab, value, index, max) || !check_up(tab, value, index, max))
 		return (0);

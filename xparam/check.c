@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int	check_row_up(int **tab, int row, int max)
+uint8_t	check_row_up(uint8_t **tab, uint8_t row, uint8_t max)
 {
-	int	i;
-	int	vmax;
-	int	count;
+	uint8_t	i;
+	uint8_t	vmax;
+	uint8_t	count;
 
 	vmax = 0;
 	i = 1;
@@ -35,11 +35,11 @@ int	check_row_up(int **tab, int row, int max)
 	return (1);
 }
 
-int	check_row_down(int **tab, int row, int max)
+uint8_t	check_row_down(uint8_t **tab, uint8_t row, uint8_t max)
 {
-	int	i;
-	int	count;
-	int	vmax;
+	uint8_t	i;
+	uint8_t	count;
+	uint8_t	vmax;
 
 	count = tab[max + 1][row];
 	i = max;
@@ -58,11 +58,11 @@ int	check_row_down(int **tab, int row, int max)
 	return (1);
 }
 
-int	check_line_left(int **tab, int line, int max)
+uint8_t	check_line_left(uint8_t **tab, uint8_t line, uint8_t max)
 {
-	int	i;
-	int	vmax;
-	int	count;
+	uint8_t	i;
+	uint8_t	vmax;
+	uint8_t	count;
 
 	count = tab[line][0];
 	vmax = 0;
@@ -81,11 +81,11 @@ int	check_line_left(int **tab, int line, int max)
 	return (1);
 }
 
-int	check_line_right(int **tab, int line, int max)
+uint8_t	check_line_right(uint8_t **tab, uint8_t line, uint8_t max)
 {
-	int	i;
-	int	count;
-	int	vmax;
+	uint8_t	i;
+	uint8_t	count;
+	uint8_t	vmax;
 
 	i = max;
 	vmax = 0;
@@ -104,9 +104,9 @@ int	check_line_right(int **tab, int line, int max)
 	return (1);
 }
 
-int	valid_tab(int **tab, int max)
+uint8_t	valid_tab(uint8_t **tab, uint8_t max)
 {
-	int	i;
+	uint8_t	i;
 
 	i = 1;
 	while (i <= max)

@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void	fill_up_down(int **duptab, int size)
+void	fill_up_down(uint8_t **duptab, uint8_t size)
 {
-	int	i;
-	int	j;
-	int	grid_size;
+	uint8_t	i;
+	uint8_t	j;
+	uint8_t	grid_size;
 
 	grid_size = size / 8;
 	j = 1;
@@ -32,10 +32,10 @@ void	fill_up_down(int **duptab, int size)
 	}
 }
 
-void	fill_left_right(int **duptab, int size)
+void	fill_left_right(uint8_t **duptab, uint8_t size)
 {
-	int	i;
-	int	grid_size;
+	uint8_t	i;
+	uint8_t	grid_size;
 
 	grid_size = size / 8;
 	i = 1;
@@ -50,7 +50,7 @@ void	fill_left_right(int **duptab, int size)
 	}
 }
 
-void	min_column_fill(int **tab, int i, int j, int size)
+void	min_column_fill(uint8_t **tab, uint8_t i, uint8_t j, uint8_t size)
 {
 	if (i == 0)
 	{
@@ -65,7 +65,7 @@ void	min_column_fill(int **tab, int i, int j, int size)
 	return ;
 }
 
-void	min_row_fill(int **tab, int i, int j, int size)
+void	min_row_fill(uint8_t **tab, uint8_t i, uint8_t j, uint8_t size)
 {
 	if (j == 0)
 	{
@@ -80,10 +80,10 @@ void	min_row_fill(int **tab, int i, int j, int size)
 	return ;
 }
 
-void	fill_min(int **tab, int size)
+void	fill_min(uint8_t **tab, uint8_t size)
 {
-	int	i;
-	int	j;
+	uint8_t	i;
+	uint8_t	j;
 
 	i = -1;
 	size /= 8;

@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void	print_tab(int **tab, int size)
+void	print_tab(uint8_t **tab, uint8_t size)
 {
-	int	i;
-	int	j;
-	int	grid_size;
+	uint8_t	i;
+	uint8_t	j;
+	uint8_t	grid_size;
 
 	i = 0;
 	grid_size = ((size / 8) + 2);

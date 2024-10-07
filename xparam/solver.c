@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int	solve_tab(int **tab, int index, int size)
+uint8_t	solve_tab(uint8_t **tab, uint8_t index, uint8_t size)
 {
-	int	value;
-	int	grid_size;
-	int	max;
+	uint8_t	value;
+	uint8_t	grid_size;
+	uint8_t	max;
 
 	max = (size / 8);
 	grid_size = max * max;

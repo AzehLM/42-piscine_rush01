@@ -16,25 +16,26 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
 void	ft_putstrerror(char *str);
-void	print_tab(int **tab, int size);
-void	fill_min(int **duptab, int size);
-void	fill_max(int **duptab, int size);
+void	print_tab(uint8_t **tab, uint8_t size);
+void	fill_min(uint8_t **duptab, uint8_t size);
+void	fill_max(uint8_t **duptab, uint8_t size);
 
-void	pre_fill(int **duptab, int size);
+void	pre_fill(uint8_t **duptab, uint8_t size);
 
 size_t	ft_strlen(char *str);
 
-int		solve_tab(int **tab, int index, int size);
-int		is_valid_value(int **tab, int value, int index, int max);
-int		valid_tab(int **tab, int max);
-int		**init_tab(char *str, size_t size);
-int		is_valid_param(char *str, int size);
-int		**ft_tabdup(int **tab, int size);
+uint8_t		solve_tab(uint8_t **tab, uint8_t index, uint8_t size);
+uint8_t		is_valid_value(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max);
+uint8_t		valid_tab(uint8_t **tab, uint8_t max);
+uint8_t		**init_tab(char *str, size_t size);
+uint8_t		is_valid_param(char *str, uint8_t size);
+uint8_t		**ft_tabdup(uint8_t **tab, uint8_t size);
 
-int		check_value(int **duptab, int i, int j);
+uint8_t		check_value(uint8_t **duptab, uint8_t i, uint8_t j);
 
 #endif

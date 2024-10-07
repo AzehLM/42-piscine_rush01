@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int	**init_borders(int **tab, char *str)
+uint8_t	**init_borders(uint8_t **tab, char *str)
 {
-	int	strindex;
-	int	tabindex;
-	int	n;
-	int	len;
+	uint8_t	strindex;
+	uint8_t	tabindex;
+	uint8_t	n;
+	uint8_t	len;
 
 	len = ft_strlen(str);
 	n = (len + 1) / 8;
@@ -41,15 +41,15 @@ int	**init_borders(int **tab, char *str)
 	return (tab);
 }
 
-int	**init_tab(char *str, size_t size)
+uint8_t	**init_tab(char *str, size_t size)
 {
-	int		i;
-	int		j;
-	int		grid_size;
-	int		**tab;
+	uint8_t		i;
+	uint8_t		j;
+	uint8_t		grid_size;
+	uint8_t		**tab;
 
 	grid_size = ((size / 8) + 2);
-	tab = malloc(grid_size * sizeof(int *));
+	tab = malloc(grid_size * sizeof(uint8_t *));
 	if (!tab)
 		return (NULL);
 	i = 0;

@@ -29,7 +29,7 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	int	i;
+	uint8_t	i;
 
 	i = 0;
 	while (str && str[i])
@@ -41,7 +41,7 @@ void	ft_putstr(char *str)
 
 void	ft_putstrerror(char *str)
 {
-	int	i;
+	uint8_t	i;
 
 	i = 0;
 	while (str && str[i])
@@ -51,7 +51,7 @@ void	ft_putstrerror(char *str)
 	}
 }
 
-int	check_value(int **duptab, int i, int j)
+uint8_t	check_value(uint8_t **duptab, uint8_t i, uint8_t j)
 {
 	if (duptab[i][j] != 0)
 		return (0);

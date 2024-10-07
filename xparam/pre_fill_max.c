@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void	fill_up_down_max(int **duptab, int size)
+void	fill_up_down_max(uint8_t **duptab, uint8_t size)
 {
-	int	i;
-	int	j;
-	int	grid_size;
+	uint8_t	i;
+	uint8_t	j;
+	uint8_t	grid_size;
 
 	grid_size = size / 8;
 	j = 1;
@@ -32,10 +32,10 @@ void	fill_up_down_max(int **duptab, int size)
 	}
 }
 
-void	fill_left_right_max(int **duptab, int size)
+void	fill_left_right_max(uint8_t **duptab, uint8_t size)
 {
-	int	i;
-	int	grid_size;
+	uint8_t	i;
+	uint8_t	grid_size;
 
 	grid_size = size / 8;
 	i = 1;
@@ -50,9 +50,9 @@ void	fill_left_right_max(int **duptab, int size)
 	}
 }
 
-void	max_column_fill(int **tab, int i, int j, int size)
+void	max_column_fill(uint8_t **tab, uint8_t i, uint8_t j, uint8_t size)
 {
-	int	fill;
+	uint8_t	fill;
 
 	fill = 1;
 	if (i == 0)
@@ -77,9 +77,9 @@ void	max_column_fill(int **tab, int i, int j, int size)
 	}
 }
 
-void	max_row_fill(int **tab, int i, int j, int size)
+void	max_row_fill(uint8_t **tab, uint8_t i, uint8_t j, uint8_t size)
 {
-	int	fill;
+	uint8_t	fill;
 
 	fill = 1;
 	if (j == 0)
@@ -104,10 +104,10 @@ void	max_row_fill(int **tab, int i, int j, int size)
 	}
 }
 
-void	fill_max(int **tab, int size)
+void	fill_max(uint8_t **tab, uint8_t size)
 {
-	int	i;
-	int	j;
+	uint8_t	i;
+	uint8_t	j;
 
 	size /= 8;
 	i = -1;

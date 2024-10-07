@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	pre_fill(int **duptab, int size)
+void	pre_fill(uint8_t **duptab, uint8_t size)
 {
 	fill_max(duptab, size);
 	fill_min(duptab, size);
