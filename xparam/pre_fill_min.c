@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pre_fill.c                                         :+:      :+:    :+:   */
+/*   pre_fill_min.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:40:53 by gueberso          #+#    #+#             */
-/*   Updated: 2024/10/01 18:31:17 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:26:43 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ void	fill_left_right(int **duptab, int size)
 	}
 }
 
-void	fill_min(int **duptab, int size)
-{
-	fill_left_right(duptab, size);
-	fill_up_down(duptab, size);
-}
+// void	fill_min(int **duptab, int size)
+// {
+// 	fill_left_right(duptab, size);
+// 	fill_up_down(duptab, size);
+// }
 
 // void	ft_prefill(int **tab, int size)
 // {
@@ -90,3 +90,62 @@ void	fill_min(int **duptab, int size)
 //         i++;
 //     }
 // }
+
+void	min_column_fill(int **tab, int i, int j, int size)
+{
+	if (i == 0)
+	{
+		if (tab[i + 1][j] == 0)
+			tab[i + 1][j] = size;
+	}
+	else
+	{
+		if (tab [i - 1][j] == 0)
+			tab[i - 1][j] = size;
+	}
+	return ;
+}
+
+void	min_row_fill(int **tab, int i, int j, int size)
+{
+	if (j == 0)
+	{
+		if (tab[i][j + 1] == 0)
+			tab[i][j + 1] = size;
+	}
+	else
+	{
+		if (tab[i][j - 1] == 0)
+			tab[i][j - 1] = size;
+	}
+	return ;
+}
+
+void	fill_min(int **tab, int size)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	size /= 8;
+	while (++i < size + 2)
+	{
+		j = -1;
+		if (i == 0 || i == size + 1)
+		{
+			while (++j < size + 2)
+			{
+				if (tab[i][j] == 1)
+					min_column_fill(tab, i, j, size);
+			}
+		}
+		else
+		{
+			while (++j < size + 2)
+			{
+				if (tab[i][j] == 1 && (j == 0 || j == size + 1))
+					min_row_fill(tab, i, j, size);
+			}
+		}
+	}
+}
