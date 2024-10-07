@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 07:58:58 by gueberso          #+#    #+#             */
-/*   Updated: 2024/10/07 12:57:05 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/07 23:40:57 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ uint8_t	solve_tab(uint8_t **tab, uint8_t index, uint8_t size)
 		value = 1;
 		while (value < max + 1)
 		{
+			print_tab(tab, size);
+			printf("\n");
+			usleep(33333);
 			tab[index / max + 1][index % max + 1] = value;
 			if (is_valid_value(tab, value, index, max))
 			{

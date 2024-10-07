@@ -1,4 +1,4 @@
-NAME	= rush01
+NAME	= rush-01
 
 SRCS	:= \
 	main.c \
@@ -19,6 +19,11 @@ OBJS		:= $(SRCS:%.c=$(BUILD_DIR)/%.o)
 DEPS		:= $(OBJS:.o=.d)
 INCS 		:= -I includes
 
+RED         := \033[0;31m
+GREEN       := \033[0;32m
+YELLOW      := \033[0;33m
+RESETC      := \033[0m
+
 CC			:= cc
 CFLAGS		:= -Wall -Wextra -Werror
 CPPFLAGS    := -MMD -MP -I .
@@ -34,20 +39,20 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) $(INCS) -O3
-	@echo "CREATED $@"
+	@echo "$(GREEN)CREATED $@$(RESETC)"
 
 $(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
 
 $(BUILD_DIR):
 	$(DIR_DUP)
-	@echo "CREATED $(BUILD_DIR) directory"
+	@echo "$(YELLOW)CREATED $(BUILD_DIR) directory$(RESETC)"
 
 -include $(DEPS)
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
-	@echo "DELETED OBJS and DEPS"
+	@echo "$(RED)DELETED OBJS and DEPS$(RESETC)"
 
 fclean: clean
 	$(RM) $(RMDIR) $(NAME) $(BUILD_DIR)
