@@ -30,7 +30,7 @@ void	pre_fill(uint8_t **duptab, uint8_t size);
 size_t	ft_strlen(char *str);
 
 uint8_t		solve_tab(uint8_t **tab, uint8_t index, uint8_t size);
-uint8_t		is_valid_value(uint8_t **tab, uint8_t value, uint8_t index, uint8_t max);
+uint8_t		is_valid_value(uint8_t **tab, uint8_t index, uint8_t max);
 uint8_t		valid_tab(uint8_t **tab, uint8_t max);
 uint8_t		**init_tab(char *str, size_t size);
 uint8_t		is_valid_param(char *str, uint8_t size);

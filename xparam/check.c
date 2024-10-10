@@ -23,10 +23,8 @@ uint8_t	check_row_up(uint8_t **tab, uint8_t row, uint8_t max)
 	row_state = 1;
 	i = 1;
 	count = tab[0][row];
-	while (i < max + 1)
+	while (i < max + 1 && tab[i][row] != 0)
 	{
-		if (tab[i][row] == 0)
-			row_state = 0;
 		if (tab[i][row] > vmax)
 		{
 			vmax = tab[i][row];
@@ -34,7 +32,11 @@ uint8_t	check_row_up(uint8_t **tab, uint8_t row, uint8_t max)
 		}
 		i++;
 	}
+	if (i < max + 1 && tab[i][row] == 0)
+		row_state = 0;
 	if (row_state == 1 && count != 0)
+		return (0);
+	else if (row_state == 0 && count < 0)
 		return (0);
 	return (1);
 }
@@ -77,10 +79,8 @@ uint8_t	check_line_left(uint8_t **tab, uint8_t line, uint8_t max)
 	line_state = 1;
 	vmax = 0;
 	i = 1;
-	while (i < max + 1)
+	while (i < max + 1 && tab[line][i] != 0)
 	{
-		if (tab[line][i] == 0)
-			line_state = 0;
 		if (tab[line][i] > vmax)
 		{
 			vmax = tab[line][i];
@@ -88,9 +88,13 @@ uint8_t	check_line_left(uint8_t **tab, uint8_t line, uint8_t max)
 		}
 		i++;
 	}
+	if (i < max + 1 && tab[line][i] == 0)
+		line_state = 0;
 	if (line_state == 1 && count != 0)
 		return (0);
-	return(1);
+	else if (line_state == 0 && count < 0)
+		return (0);
+	return (1);
 }
 
 uint8_t	check_line_right(uint8_t **tab, uint8_t line, uint8_t max)

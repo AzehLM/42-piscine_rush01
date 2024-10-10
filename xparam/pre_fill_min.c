@@ -24,10 +24,10 @@ void	fill_up_down(uint8_t **duptab, uint8_t size)
 	while (j <= grid_size)
 	{
 		if (duptab[0][j] == 1 && check_value(duptab, i + 1, j) == 1)
-			duptab[1][j] = grid_size;
+			duptab[1][j] = grid_size * 2;
 		if (duptab[grid_size + 1][j] == 1
 			&& check_value(duptab, grid_size, j) == 1)
-			duptab[grid_size][j] = grid_size;
+			duptab[grid_size][j] = grid_size * 2;
 		j++;
 	}
 }
@@ -42,10 +42,10 @@ void	fill_left_right(uint8_t **duptab, uint8_t size)
 	while (i <= grid_size)
 	{
 		if (duptab[i][0] == 1 && check_value(duptab, i, 1) == 1)
-			duptab[i][1] = grid_size;
+			duptab[i][1] = grid_size * 2;
 		if (duptab[i][grid_size + 1] == 1
 			&& check_value(duptab, i, grid_size) == 1)
-			duptab[i][grid_size] = grid_size;
+			duptab[i][grid_size] = grid_size * 2;
 		i++;
 	}
 }

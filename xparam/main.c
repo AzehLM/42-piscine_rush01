@@ -37,26 +37,20 @@ uint8_t	check_arg(char *av)
 	return (1);
 }
 
-void	free_tabs(uint8_t size, uint8_t **tab, uint8_t **duptab)
+void	free_tabs(uint8_t size, uint8_t **tab)
 {
 	uint8_t	i;
-	uint8_t	j;
 
 	i = 0;
-	j = 0;
 	while (i < (size / 8) + 2)
 		free(tab[i++]);
 	free(tab);
-	while (j < (size / 8) + 2)
-		free(duptab[j++]);
-	free(duptab);
 }
 
 int	main(int ac, char **av)
 {
 	uint8_t		**tab;
-	uint8_t		**duptab;
-	size_t	size;
+	size_t		size;
 
 	size = ft_strlen(av[1]) + 1;
 	if (ac != 2 || check_arg(av[1]) == 0 || is_valid_param(av[1], size) == 0)
@@ -65,14 +59,13 @@ int	main(int ac, char **av)
 		return (-1);
 	}
 	tab = init_tab(av[1], size);
-	duptab = ft_tabdup(tab, size);
 	if (!tab)
 		return (-1);
-	pre_fill(duptab, size);
+	pre_fill(tab, size);
 	if (solve_tab(tab, 0, size))
 		print_tab(tab, size);
 	else
 		printf("Error, no solution\n");
-	free_tabs(size, tab, duptab);
+	free_tabs(size, tab);
 	return (0);
 }

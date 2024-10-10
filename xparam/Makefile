@@ -39,20 +39,20 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) $(INCS) -O3
-	@echo "$(GREEN)CREATED $@$(RESETC)"
+	@printf "$(GREEN)CREATED $@$(RESETC)"
 
 $(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
 
 $(BUILD_DIR):
 	$(DIR_DUP)
-	@echo "$(YELLOW)CREATED $(BUILD_DIR) directory$(RESETC)"
+	@printf "$(YELLOW)CREATED $(BUILD_DIR) directory$(RESETC)"
 
 -include $(DEPS)
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
-	@echo "$(RED)DELETED OBJS and DEPS$(RESETC)"
+	@printf "$(RED)DELETED OBJS and DEPS$(RESETC)"
 
 fclean: clean
 	$(RM) $(RMDIR) $(NAME) $(BUILD_DIR)
